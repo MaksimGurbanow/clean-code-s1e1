@@ -41,6 +41,7 @@ body {
 }
 .new-task__task-row-wrapper {
     display: flex;
+    width: 100%;
 }
 button {
     background: none;
@@ -54,14 +55,12 @@ button {
 button:hover {
     color: #3a3A3a;
 }
-h3,
-label[for='new-task'] {
+h3 {
     color: #333;
     font-weight: 700;
     font-size: 15px;
     border-bottom: 2px solid #333;
     padding: 30px 0 10px;
-    margin: 0;
     text-transform: uppercase;
 }
 input {
@@ -81,15 +80,13 @@ input:focus {
     color: #333;
 }
 
-label[for='new-task'] {
-    display: block;
-    margin: 0 0 20px;
-}
 #new-task {
     width: 318px;
 }
 
-li {
+.completed-tasks__item,
+.incomplete-tasks__item,
+.new-task {
     list-style: none;
     overflow: hidden;
     padding: 20px 0;

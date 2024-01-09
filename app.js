@@ -85,11 +85,11 @@ var editTask=function(){
 
 
     var listItem=this.parentNode;
-
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    const parentClassName = listItem.parentNode.className;
+    var editInput=listItem.querySelector("." + parentClassName + "__input");
+    var label=listItem.querySelector("." + parentClassName + "__label");
+    var editBtn=listItem.querySelector("." + parentClassName + "__edit");
+    var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -103,7 +103,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("edit-mode");
 };
 
 

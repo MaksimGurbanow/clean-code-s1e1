@@ -129,11 +129,11 @@ input:focus {
 
 /* Edit Task */
 
-.edit-mode .incomplete-tasks__input {
+.edit-mode input[type="text"] {
     display: inline-block;
     width: 224px;
 }
 
-.edit-mode .incomplete-tasks__label {
+.edit-mode label {
     display: none;
 }
